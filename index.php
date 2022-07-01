@@ -114,6 +114,24 @@
 					</a></li>
 				</ul>
 			</li>
+			<li class="parent "><a data-toggle="collapse" href="#sub-item-4">
+				<em class="fa fa-download">&nbsp;</em> Download Data<span data-toggle="collapse" href="#sub-item-4" class="icon pull-right"><em class="fa fa-plus"></em></span>
+				</a>
+				<ul class="children collapse" id="sub-item-4">
+					<li><a class="" href="putra.php">
+						<span class="fa fa-arrow-right">&nbsp;</span> Santri putra
+					</a></li>
+					<li><a class="" href="putri.php">
+						<span class="fa fa-arrow-right">&nbsp;</span> Santri putri
+					</a></li>
+					<li><a class="" href="alumniputra.php">
+						<span class="fa fa-arrow-right">&nbsp;</span> Alumni putra
+					</a></li>
+					<li><a class="" href="alumniputri.php">
+						<span class="fa fa-arrow-right">&nbsp;</span> Alumni putri
+					</a></li>
+				</ul>
+			</li>
 			<li><a href="index.php?logout=true"><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>
 		</ul>
 	</div><!--/.sidebar-->

@@ -29,7 +29,7 @@
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse"><span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span></button>
 				<a class="navbar-brand" href="#"><span>Mathaliul</span> Anwar</a>
@@ -78,7 +78,7 @@
 					</a></li>
 				</ul>
 			</li>
-			<li class="parent active"><a data-toggle="collapse" href="#sub-item-2">
+			<li class="parent "><a data-toggle="collapse" href="#sub-item-2">
 				<em class="fa fa-address-card-o">&nbsp;</em> Data Santri Putri<span data-toggle="collapse" href="#sub-item-2" class="icon pull-right"><em class="fa fa-plus"></em></span>
 				</a>
 				<ul class="children collapse" id="sub-item-2">
@@ -93,7 +93,7 @@
 					</a></li>
 				</ul>
 			</li>
-			<li class="parent "><a data-toggle="collapse" href="#sub-item-4">
+			<li class="parent active"><a data-toggle="collapse" href="#sub-item-4">
 				<em class="fa fa-download">&nbsp;</em> Download Data<span data-toggle="collapse" href="#sub-item-4" class="icon pull-right"><em class="fa fa-plus"></em></span>
 				</a>
 				<ul class="children collapse" id="sub-item-4">
@@ -121,7 +121,7 @@
 				<li><a href="#">
 					<em class="fa fa-home"></em>
 				</a></li>
-				<li class="active">Data Santri Putri Lama</li>
+				<li class="active">Data Santri Putra</li>
 			</ol>
 		</div><!--/.row-->
 		<br>
@@ -184,7 +184,7 @@
 											<option>Option 4</option> -->
 										</select>
 								</div>
-								</div>
+							</div>
 								<div class="col-md-6">
 									<div class="form-group">
 										<div class="form-group">
@@ -237,127 +237,39 @@
 				</div>
 			</div>
 		</div><!--/.row-->		
-		<?php }elseif(isset($_GET['show'])){ 
-			$id = $_GET['id'];
-				$santri = mysqli_query($koneksi, "SELECT * FROM mahasiswa WHERE id=$id");
-				$data = mysqli_fetch_assoc($santri);
-		?>
-	<div class="page-content">
-        <div class="container">
-            <div class="resume-container">
-                <div class="shadow-1-strong bg-white my-5" id="intro">
-                    <div class="bg-info text-white">
-                            <div class="mask" style="background-image: linear-gradient(to right, #30a5ff , #8ad9db);">
-                                <div class="text-center p-5">
-									<br>
-                                    <div class="avatar p-1"><img class="../img-thumbnail shadow-2-strong"
-                                            src="uploads/<?= $data['photo'] ?>" width="160" height="160" /></div>
-                                    <div class="header-bio mt-3">
-                                        <div data-aos="zoom-in" data-aos-delay="0">
-                                            <h2 class="h1"><?= $data['first_name'] ?></h2>
-                                            <p>NIM : <?= $data['nim'] ?></p>
-                                        </div>
-                                        <div class="header-social mb-3 d-print-none" data-aos="zoom-in"
-                                            data-aos-delay="200">
-                                            <nav role="navigation">
-                                                <ul class="nav justify-content-center">
-													<i class="fa fa-venus-mars"> <?= $data['jk'] ?>			&emsp;</i>
-                                                    <i class="fa fa-street-view"> <?= $data['alamat'] ?>	&emsp;</i>
-													<i class="fa fa-bed"> <?= $data['kamar'] ?>				&emsp;</i>
-													<i class="fa fa-genderless"> <?= $data['statuss'] ?>	&emsp;</i>
-                                                </ul>
-                                            </nav>
-                                        </div>
-										<br>
-                                    </div>
-                                </div>
-                            </div>
-                    </div>
-                </div>
-                <div class="shadow-1-strong bg-white my-5 p-5" id="about">
-                    <div class="about-section">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h2 class="h2 fw-light mb-4">Tujuan Belajar</h2>
-                                <p><?= $data['tujuan'] ?>.</p>
-                            </div>
-                            <div class="col-md-3 offset-lg-1">
-                                <div class="row mt-2">
-                                    <h2 class="h2 fw-light mb-4">&nbsp;   Profil</h2>
-                                    <div class="col-sm-5">
-                                        <div class="pb-2 fw-bolder">Kota</div>
-                                    </div>
-                                    <div class="col-sm-7">
-                                        <div class="pb-2">: <?= $data['kota'] ?></div>
-                                    </div>
-									<div class="col-sm-5">
-                                        <div class="pb-2 fw-bolder">Postal Code</div>
-                                    </div>
-                                    <div class="col-sm-7">
-                                        <div class="pb-2">: <?= $data['postal'] ?></div>
-                                    </div>
-                                    <div class="col-sm-5">
-                                        <div class="pb-2 fw-bolder">Nama Ayah</div>
-                                    </div>
-                                    <div class="col-sm-7">
-                                        <div class="pb-2">: <?= $data['n_ayah'] ?></div>
-                                    </div>
-                                    <div class="col-sm-5">
-                                        <div class="pb-2 fw-bolder">Nama Ibu</div>
-                                    </div>
-                                    <div class="col-sm-7">
-                                        <div class="pb-2">: <?= $data['n_ibu'] ?></div>
-                                    </div>
-                                    <div class="col-sm-5">
-                                        <div class="pb-2 fw-bolder">No HP</div>
-                                    </div>
-                                    <div class="col-sm-7">
-                                        <div class="pb-2">: <?= $data['no_hp'] ?></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-	<br><br><br>
 		<?php }else{ ?>
-		<div class="row">
+		<div class="row ">
 			<div class="col-lg-12">
 				<div class="panel panel-default">
 					<div class="panel-heading">
-						Data Mahasiswa Putri
-						<a href="form.php" class="btn btn-success btn-sm">Tambah</a>
-						<form role="search" class="pull-right">
-							<div class="form-group">
-								<input type="text" class="form-control " placeholder="Cari Data Santri Lama" name="kata_cari">
-							</div>
-						</form>	
+						Data Mahasiswa Putra
+						<a href="exportputra.php" class="btn btn-success btn-sm pull-right" onclick="NewTab()">Download</a>
 					</div>
-					<div class="panel-body">
+					<div class="panel-body ">
 						<div class="canvas-wrapper table-responsive">
                         <table class="table tablesorter " id="">
 								<thead class=" text-primary">
 									<tr>
 									<th>
+										NIM
+									</th>
+                                    <th>
 										Nama Lengkap
+									</th>
+                                    <th>
+										Jenis Kelamin
 									</th>
 									<th>
 										Tanggal Lahir
 									</th>
 									<th>
-										Kamar/Blok
+										Kota
 									</th>
 									<th>
-										Nama Ayah
+										Status
 									</th>
 									<th>
-										Nama Ibu
-									</th>
-									<th>
-										Action
+										NO HP
 									</th>
 									</tr>
 								</thead>
@@ -370,10 +282,10 @@
 								$kata_cari = $_GET['kata_cari'];
 
 								//mencari data dengan menggunakan query
-								$query = "SELECT * FROM mahasiswa WHERE first_name like '%".$kata_cari."%' AND statuss='Santri Lama' AND jk='Perempuan'";
+								$query = "SELECT * FROM mahasiswa WHERE first_name like '%".$kata_cari."%' AND statuss='Santri Baru' AND jk='Laki - Laki'";
 								} else {
 								//jika tidak ada pencarian, default yang dijalankan query ini
-									$query = "SELECT * FROM mahasiswa WHERE statuss='Santri Lama' AND jk='Perempuan'";
+									$query = "SELECT * FROM mahasiswa WHERE statuss!='Alumni' AND jk='Laki - Laki'";
 								}
 
 								$result = mysqli_query($koneksi, $query);
@@ -389,16 +301,13 @@
 									.upper { text-transform: uppercase; }
 									.cap   { text-transform: capitalize; }
 								</style>
-								<td class="cap"><?php echo $row['first_name']; ?></td>
+								<td class="cap"><?php echo $row['nim']; ?></td>
+								<td class="upper"><?php echo $row['first_name']; ?></td>
+								<td class="cap"><?php echo $row['jk']; ?></td>
 								<td class="upper"><?php echo $row['tgl_lahir']; ?></td>
-								<td class="upper"><?php echo $row['kamar']; ?></td>
-								<td class="upper"><?php echo $row['n_ayah']; ?></td>
-								<td class="upper"><?php echo $row['n_ibu']; ?></td>
-								<td>
-									<a href="putrilama.php?show&id=<?= $row['id'] ?>" class="btn btn-primary btn-sm">Show</a>
-									<a href="putrilama.php?edit&id=<?= $row['id'] ?>" class="btn btn-warning btn-sm">Edit</a>
-									<a href="delete.php?id='<?= $row['id'] ?>'" class="btn btn-danger btn-sm">Delete</a>
-								</td>
+								<td class="cap"><?php echo $row['kota']; ?></td>
+								<td class="cap"><?php echo $row['statuss']; ?></td>
+								<td class="cap"><?php echo $row['no_hp']; ?></td>
 								</tr>
 								<?php
 								}
@@ -414,11 +323,16 @@
 					
 		<div class="row">
 			<div class="col-sm-12">
-			<p class="back-link">Mathaliul <a href="">Anwar</a></p>
+				<p class="back-link">Mathaliul <a href="">Anwar</a></p>
 			</div>
 		</div><!--/.row-->
 	</div>	<!--/.main-->
-	
+	<script>
+        function NewTab() {
+            window.open(
+            "exportputra.php", "_blank");
+        }
+    </script>
 	<script src="js/jquery-1.11.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/chart.min.js"></script>
